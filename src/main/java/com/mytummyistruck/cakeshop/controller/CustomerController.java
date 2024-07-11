@@ -41,7 +41,7 @@ public class CustomerController {
     public ResponseEntity<?> addCustomer(@RequestBody Customer customer){
         try{
             customerService.addCustomer(customer);
-            return new ResponseEntity<>("Record added.", HttpStatus.CREATED);
+            return new ResponseEntity<>("Customer record added.", HttpStatus.CREATED);
         } catch(Exception e){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
