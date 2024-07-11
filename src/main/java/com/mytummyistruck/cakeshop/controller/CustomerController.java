@@ -34,7 +34,7 @@ public class CustomerController {
         Customer customer = customerService.searchCustomer(username);
         if(customer!=null)
             return new ResponseEntity<>(customer, HttpStatus.OK);
-        return new ResponseEntity<>("Record not found.", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Customer record not found.", HttpStatus.NOT_FOUND);
     }
 
     @PostMapping
